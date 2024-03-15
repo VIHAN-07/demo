@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAN Card Application Guide</title>
+    <link rel="stylesheet" href="sample.css">
+</head>
+<body>
+    <div class="container">
+        <img src="image.jpg" alt="Background Image">
+        <div class="info">
+            <h1>PBL PROJECT</h1>
+            <p>STEPS TO APLY FOR DIFFERENT DOCUMENTS IN INDIA</p>
+        </div>
+    </div>
+    <div id="trial">
+        <label for="cars">select document:</label>
+        <select name="cars" id="cars" onchange="goToLink()">
+            <option value="volvo" data-link="">select document</option>
+           
+            <option value="saab" data-link="./adhar.html">adhar card</option>
+            <option value="opel" data-link="./licence.html">license</option>
+            <option value="opel" data-link="./pan card.html">pan card</option>
+            <option value="opel" data-link="./voter id.html">voter id</option>
+            <option value="opel" data-link="./passport.html">passport</option>
+            
+            
+    </select>
+    </div>
+
+    <script>
+        function goToLink() {
+          var select = document.getElementById("cars");
+          var selectedOption = select.options[select.selectedIndex];
+          var link = selectedOption.getAttribute("data-link");
+          window.location.href = link;
+        }
+      </script>
+</body>
+</html>

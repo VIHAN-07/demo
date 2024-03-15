@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Passport Application Guide</title>
+    <link rel="stylesheet" href="pbl.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Indian Passport Application Guide</h1>
+        <div class="steps">
+            <div class="step">
+                <h2>Step 1: Register Online</h2>
+                <p>Create an account on the Passport Seva website and fill in the application form.</p>
+            </div>
+            <div class="step">
+                <h2>Step 2: Gather Documents</h2>
+                <p>Collect required documents such as proof of identity, address, and date of birth.</p>
+            </div>
+            <div class="step">
+                <h2>Step 3: Schedule Appointment</h2>
+                <p>Schedule an appointment at the nearest Passport Seva Kendra or Passport Office.</p>
+            </div>
+            <div class="step">
+                <h2>Step 4: Visit Passport Office</h2>
+                <p>Visit the Passport Office on the scheduled date with all required documents.</p>
+            </div>
+            <div class="step">
+                <h2>Step 5: Biometric Data Capture</h2>
+                <p>Your photograph, fingerprints, and signature will be captured at the Passport Seva Kendra.</p>
+            </div>
+            <div class="step">
+                <h2>Step 6: Fee Payment</h2>
+                <p>Pay the applicable fee for passport processing through online or offline mode.</p>
+            </div>
+            <div class="step">
+                <h2>Step 7: Passport Issuance</h2>
+                <p>Once your application is processed, your passport will be issued and dispatched to your address.</p>
+            </div>
+        </div>
+    </div>
+    <div id="trial">
+        <label for="cars">select document:</label>
+        <select name="cars" id="cars" onchange="goToLink()">
+            <option value="volvo" data-link="">select document</option>
+            <option value="volvo" data-link="./index.html">home</option>
+            <option value="saab" data-link="./adhar.html">adhar card</option>
+            <option value="opel" data-link="./licence.html">license</option>
+            <option value="opel" data-link="./pan card.html">pan card</option>
+            <option value="opel" data-link="./voter id.html">voter id</option>
+            
+            
+    </select>
+    </div>
+
+    <script>
+        function goToLink() {
+          var select = document.getElementById("cars");
+          var selectedOption = select.options[select.selectedIndex];
+          var link = selectedOption.getAttribute("data-link");
+          window.location.href = link;
+        }
+      </script>
+</body>
+</html>

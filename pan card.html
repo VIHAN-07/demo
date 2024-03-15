@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAN Card Application Guide</title>
+    <link rel="stylesheet" href="pbl.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PAN Card Application Guide</h1>
+        <div class="steps">
+            <div class="step">
+                <h2>Step 1: Fill PAN Card Application Form</h2>
+                <p>Download Form 49A from the NSDL or UTITSL website and fill it accurately.</p>
+            </div>
+            <div class="step">
+                <h2>Step 2: Attach Required Documents</h2>
+                <p>Attach documents like proof of identity, address, and date of birth.</p>
+            </div>
+            <div class="step">
+                <h2>Step 3: Submit Application</h2>
+                <p>Submit the application form along with the required documents to the nearest PAN center.</p>
+            </div>
+            <div class="step">
+                <h2>Step 4: Pay Application Fee</h2>
+                <p>Pay the prescribed fee online or through demand draft along with the application.</p>
+            </div>
+            <div class="step">
+                <h2>Step 5: Track Application Status</h2>
+                <p>Track your application status online using the acknowledgment number provided.</p>
+            </div>
+        </div>
+    </div>
+    <div id="trial">
+        <label for="cars">select document:</label>
+        <select name="cars" id="cars" onchange="goToLink()">
+            <option value="volvo" data-link="">select document</option>
+            <option value="volvo" data-link="./index.html">home</option>
+            <option value="saab" data-link="./adhar.html">adhar card</option>
+            <option value="opel" data-link="./licence.html">license</option>
+            <option value="opel" data-link="./passport.html">passport</option>
+            <option value="opel" data-link="./voter id.html">voter id</option>
+            
+    </select>
+    </div>
+
+    <script>
+        function goToLink() {
+          var select = document.getElementById("cars");
+          var selectedOption = select.options[select.selectedIndex];
+          var link = selectedOption.getAttribute("data-link");
+          window.location.href = link;
+        }
+      </script>
+</body>
+</html>

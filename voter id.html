@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voter ID Application Guide</title>
+    <link rel="stylesheet" href="pbl.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <h1>Voter ID Application Guide</h1>
+        <div class="steps">
+            <div class="step">
+                <h2>Step 1: Fill Voter ID Application Form</h2>
+                <p>Obtain and fill the Form 6 provided by the Election Commission of India.</p>
+            </div>
+            <div class="step">
+                <h2>Step 2: Attach Required Documents</h2>
+                <p>Attach documents such as proof of age, address, and identity along with passport-sized photographs.</p>
+            </div>
+            <div class="step">
+                <h2>Step 3: Submit Application</h2>
+                <p>Submit the completed application form along with the necessary documents to the Electoral Registration Officer (ERO) or Booth Level Officer (BLO).</p>
+            </div>
+            <div class="step">
+                <h2>Step 4: Verification</h2>
+                <p>After submission, your application will be verified by the designated authority.</p>
+            </div>
+            <div class="step">
+                <h2>Step 5: Receive Voter ID</h2>
+                <p>If your application is approved, you will receive your Voter ID card by mail or you can collect it from the designated location.</p>
+            </div>
+        </div>
+    </div>
+    <div id="trial">
+        <label for="cars">select document:</label>
+        <select name="cars" id="cars" onchange="goToLink()">
+            <option value="volvo" data-link="">select document</option>
+            <option value="volvo" data-link="./index.html">home</option>
+            <option value="saab" data-link="./adhar.html">adhar card</option>
+            <option value="opel" data-link="./licence.html">licsence</option>
+            <option value="opel" data-link="./pan card.html">pan card</option>
+            
+            <option value="opel" data-link="./passport.html">passport</option>
+            
+            
+    </select>
+    </div>
+
+    <script>
+        function goToLink() {
+          var select = document.getElementById("cars");
+          var selectedOption = select.options[select.selectedIndex];
+          var link = selectedOption.getAttribute("data-link");
+          window.location.href = link;
+        }
+      </script>
+</body>
+</body>
+</html>
